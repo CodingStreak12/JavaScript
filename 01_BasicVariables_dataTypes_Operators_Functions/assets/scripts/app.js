@@ -20,6 +20,14 @@ function WriteToLog(operator, prevResult, enteredNumber, outputResult) {
   console.log(logEntries);
 }
 function calculateResult(calculationType) {
+  if (
+    calculationType !== "ADD" &&
+    calculationType !== "SUBTRACT" &&
+    calculationType !== "MULTIPLY" &&
+    calculationType !== "DIVIDE"
+  ) {
+    return console.log("Working");
+  }
   const enteredNumber = getUserNumberInput();
   const initialNumber = currentResult;
   let mathOperator;
